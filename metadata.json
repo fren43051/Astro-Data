@@ -1,0 +1,5 @@
+{
+  "name": "Galería Cósmica de la NASA",
+  "description": "Una aplicación web visualmente impresionante que utiliza la API de la NASA para mostrar una galería de imágenes astronómicas. Explora el cosmos con imágenes de alta resolución y explicaciones detalladas proporcionadas por la NASA.",
+  "requestFramePermissions": []
+}
