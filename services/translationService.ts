@@ -5,7 +5,12 @@ const translationCache = new Map<string, string>();
 let ai: GoogleGenAI | null = null;
 const getAi = () => {
   if (!ai) {
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+    // FIX: Changed API key retrieval to use process.env.API_KEY per coding guidelines, resolving the compilation error.
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error("La variable de entorno API_KEY no está configurada.");
+    }
+    ai = new GoogleGenAI({ apiKey });
   }
   return ai;
 }
